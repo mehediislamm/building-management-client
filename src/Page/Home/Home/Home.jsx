@@ -1,3 +1,4 @@
+import Footer from "../../Shared/Footer/Footer";
 import AboutBuilding from "../AboutBuilding/AboutBuilding";
 import Banner from "../Banner/Banner";
 import Coupon from "../Couponsection/Coupon";
@@ -11,6 +12,7 @@ const Home = () => {
            <AboutBuilding></AboutBuilding>
            <Coupon></Coupon>
             <Maps></Maps>
+            <Footer></Footer>
           
         </div>
     );
