@@ -19,7 +19,7 @@ const MenuDropdown = () => {
     }
 
     return (
-        <div className='relative mr-4'>
+        <div className=' relative mr-4'>
             <div className='flex flex-row items-center gap-3'>
                 {/* Become A Host btn */}
                 <div className='hidden md:block'>
@@ -57,13 +57,13 @@ const MenuDropdown = () => {
                 </div>
             </div>
             {isOpen && (
-                <div className='absolute rounded-xl shadow-md w-[40vw] md:w-[10vw] bg-white overflow-hidden right-0 top-12 text-sm'>
-                    <div className='flex flex-col cursor-pointer py-5 lg:px-8 '>
+                <div className='absolute rounded-xl shadow-md w-[22vw] md:w-[22vw] lg:w-[12vw] bg-orange-300 overflow-hidden right-0 top-12 text-sm'>
+                    <div className='flex flex-col cursor-pointer md: py-5 lg:px-8 '>
                         {
-                            user ? <h1 className="font-bold text-red-500 mb-2">{user.displayName}</h1> : null
+                            user ? <h1 className="font-bold text-red-500 text-center mb-2">{user.displayName}</h1> : null
                         }
                         {
-                            user ? <h1 className="font-bold mb-2">Dashboard</h1> : null
+                            user ? <h1 className="font-bold text-center mb-2">Dashboard</h1> : null
                         }
 
                         {
