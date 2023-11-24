@@ -10,13 +10,17 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@react-google-maps/api": "^2.19.2",
+    "@vis.gl/react-google-maps": "^0.3.3",
     "firebase": "^10.6.0",
+    "google-maps-react": "^2.0.6",
     "localforage": "^1.10.0",
     "match-sorter": "^6.3.1",
-    "react": "^18.2.0",
+    "react": "^16.14.0",
     "react-dom": "^18.2.0",
     "react-icons": "^4.12.0",
     "react-id-swiper": "^4.0.0",
+    "react-leaflet": "^4.2.1",
     "react-responsive-carousel": "^3.2.23",
     "react-router-dom": "^6.20.0",
     "sort-by": "^1.2.0",
@@ -24,6 +28,7 @@
     "swiper": "^11.0.5"
   },
   "devDependencies": {
+    "@types/leaflet": "^1.9.8",
     "@types/react": "^18.2.37",
     "@types/react-dom": "^18.2.15",
     "@vitejs/plugin-react": "^4.2.0",
