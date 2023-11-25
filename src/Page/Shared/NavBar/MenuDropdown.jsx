@@ -32,9 +32,17 @@ const MenuDropdown = () => {
                     {
                         user ? null :
                             <Link to="/login">
-                                <button className="btn">Login</button>
+                                <button className="btn btn-xs">Login</button>
                             </Link>
                     }
+                    <div className='hidden'>
+                        {
+                            user ? null :
+                                <Link to="/signup">
+                                    <button className="btn btn-xs">sign up</button>
+                                </Link>
+                        }
+                    </div>
                 </div>
                 {/* Dropdown btn */}
                 <div
@@ -69,7 +77,7 @@ const MenuDropdown = () => {
                         {
                             user ? <button onClick={handleSignOut} className="btn btn-primary btn-xs text-white"> Sign Out </button> :
                                 <Link to="/login">
-                                    <button className="btn">Login</button>
+                                    <button className="btn btn-xs">Login</button>
                                 </Link>
                         }
                     </div>

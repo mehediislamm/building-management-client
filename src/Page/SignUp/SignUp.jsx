@@ -50,7 +50,7 @@ const SignUp = () => {
             })
     }
     return (
-        <div className="bg-[#e5e9ee] rounded-xl">
+        <div className="bg-[#e5e9ee] rounded-xl pt-20 mb-10">
             <h2 className="text-3xl text-center pt-5 font-bold text-yellow-600">Please Register</h2>
             <form onSubmit={handleRegister} className="md:w-3/4 lg:w-1/2 mx-auto mb-3">
                 <div className="form-control" data-aos="fade-up"

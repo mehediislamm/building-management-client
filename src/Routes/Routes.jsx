@@ -3,6 +3,8 @@ import Main from "../LayOut/Main";
 import ErrorPage from "../Page/Error/ErrorPage";
 import Home from "../Page/Home/Home/Home";
 import Login from "../Page/Login/Login";
+import Apartment from "../Page/Apartment/Apartment";
+import SignUp from "../Page/SignUp/SignUp";
 
 
 
@@ -18,9 +20,18 @@ export const router = createBrowserRouter([
             element:<Home></Home>
         },
         {
+            path:'apartment',
+            element:<Apartment></Apartment>
+        },
+        {
             path:'login',
             element:<Login></Login>
         },
+        {
+            path:'signup',
+            element:<SignUp></SignUp>
+        },
+        
       ]
     },
   ]);

@@ -120,7 +120,7 @@ const Login = () => {
                         GOOGLE</button>
                 </div>
 
-                <p className="text-xl text-center text-slate-400 md:ml-5 lg:ml-10 mb-5 pb-5">Do not have an account <Link to={'/register'} className=" text-blue-600 text-xl font-bold">Register</Link></p>
+                <p className="text-xl text-center text-slate-400 md:ml-5 lg:ml-10 mb-5 pb-5">Do not have an account <Link to={'/signup'} className=" text-blue-600 text-xl font-bold">Register</Link></p>
             </div>
         </div>
 
