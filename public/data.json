@@ -82,6 +82,91 @@
       "block_name": "C",
       "apartment_no": 102,
       "rent": 1050
+    },
+    {
+      "image": "https://i.ibb.co/Tk5c8Qs/a1.png",
+      "floor_no": 3,
+      "block_name": "A",
+      "apartment_no": 101,
+      "rent": 1200
+    },
+    {
+      "image": "https://i.ibb.co/7C3GDhM/a2.png",
+      "floor_no": 5,
+      "block_name": "B",
+      "apartment_no": 205,
+      "rent": 1500
+    },
+    {
+      "image": "https://i.ibb.co/94HqKJG/a3.png",
+      "floor_no": 2,
+      "block_name": "C",
+      "apartment_no": 302,
+      "rent": 1100
+    },
+    {
+      "image": "https://i.ibb.co/QJSFGh7/a4.png",
+      "floor_no": 4,
+      "block_name": "A",
+      "apartment_no": 401,
+      "rent": 1300
+    },
+    {
+      "image": "https://i.ibb.co/gtvRR0m/a5.png",
+      "floor_no": 6,
+      "block_name": "B",
+      "apartment_no": 602,
+      "rent": 1600
+    },
+    {
+      "image": "https://i.ibb.co/p1FcXLp/a6.png",
+      "floor_no": 1,
+      "block_name": "C",
+      "apartment_no": 105,
+      "rent": 1000
+    },
+    {
+      "image": "https://i.ibb.co/3WfHfdc/a7.png",
+      "floor_no": 3,
+      "block_name": "A",
+      "apartment_no": 303,
+      "rent": 1200
+    },
+    {
+      "image": "https://i.ibb.co/sbHvQK7/a8.png",
+      "floor_no": 5,
+      "block_name": "B",
+      "apartment_no": 501,
+      "rent": 1400
+    },
+    {
+      "image": "https://i.ibb.co/mq6gBYX/a9.png",
+      "floor_no": 2,
+      "block_name": "C",
+      "apartment_no": 201,
+      "rent": 1100
+    },
+    {
+      "image": "https://i.ibb.co/ZVbLJWb/a10.png",
+      "floor_no": 4,
+      "block_name": "A",
+      "apartment_no": 502,
+      "rent": 1350
+    },
+    {
+      "image": "https://i.ibb.co/N3KGTnP/a11.png",
+      "floor_no": 6,
+      "block_name": "B",
+      "apartment_no": 605,
+      "rent": 1550
+    },
+    {
+      "image": "https://i.ibb.co/nDRJZdZ/a12.png",
+      "floor_no": 1,
+      "block_name": "C",
+      "apartment_no": 102,
+      "rent": 1050
     }
+  
   ]
   

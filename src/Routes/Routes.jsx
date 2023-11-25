@@ -21,7 +21,8 @@ export const router = createBrowserRouter([
         },
         {
             path:'apartment',
-            element:<Apartment></Apartment>
+            element:<Apartment></Apartment>,
+            loader: () => fetch('http://localhost:5000/DataCount')
         },
         {
             path:'login',

@@ -1,7 +1,69 @@
 /* eslint-disable react/prop-types */
 
+
+import Swal from "sweetalert2";
+import useAuth from "../../../hooks/useAuth";
+import {  useLocation, useNavigate } from "react-router-dom";
+import useAxiosSecure from "../../../hooks/useAxiosSecure";
+
+
 const ApartmentCart = ({ datas }) => {
-    const { image, floor_no, block_name, apartment_no, rent } = datas;
+    const { image, floor_no, block_name, apartment_no, rent, _id} = datas;
+    const {user} = useAuth();
+    const navigate  = useNavigate();
+    const location = useLocation();
+    const axiosSecure = useAxiosSecure();
+    
+
+    const handleAddToCartData = data =>{
+        if(user && user.email){
+            //TODO: send cart item to the database
+            console.log(data, user.email);
+            const cartData = {
+                dataId: _id,
+                email: user.email,
+                name: user?.displayName,
+                image,
+                floor_no,
+                block_name,
+                apartment_no,
+                rent,
+                status:"pending",
+                data: (new Date()),
+                
+                
+            }
+            axiosSecure.post('/carts',cartData)
+            .then(res=>{
+                console.log(res.data);
+                if(res.data.insertedId){
+                    Swal.fire({
+                        position: "top-end",
+                        icon: "success",
+                        title: `${apartment_no} no apartment booking success`,
+                        showConfirmButton: false,
+                        timer: 1500
+                      });
+                }
+            })
+        }
+        else{
+            Swal.fire({
+                title: "Your are not Logged In",
+                text: "Please login to add to the cart?",
+                icon: "warning",
+                showCancelButton: true,
+                confirmButtonColor: "#3085d6",
+                cancelButtonColor: "#d33",
+                confirmButtonText: "Yes, login"
+              }).then((result) => {
+                if (result.isConfirmed) {
+                  //send the user to the login page 
+                  navigate('/login', {state:{from:location}} )
+                }
+              });
+        }
+    }
     return (
         <div className="">
             <div className="card card-compact w-96 bg-base-100 shadow-xl  ">
@@ -19,10 +81,13 @@ const ApartmentCart = ({ datas }) => {
                         <h1 className="text-xl font-serif text-white ml-1 ">price: $ {rent}</h1>
                     </div>
                     <div className="card-actions justify-center">
-                        <button className="btn btn-primary"> Agreement</button>
+                        <button 
+                        onClick={()=> handleAddToCartData(datas) }
+                        className="btn btn-primary"> Agreement</button>
                     </div>
                 </div>
             </div>
+           
         </div>
     );
 };

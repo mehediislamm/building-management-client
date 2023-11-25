@@ -11,6 +11,7 @@ import swal from 'sweetalert';
 import loggedImage from '../../assets/login.jpg'
 import { AuthContext } from "../../provider/AuthProvider";
 import app from "../../config/firebase.config";
+import { Helmet } from "react-helmet-async";
 
 
 
@@ -22,6 +23,8 @@ const Login = () => {
     const { signIn, } = useContext(AuthContext);
     const location = useLocation();
     const navigate = useNavigate();
+    const from =  location.state?.from?.pathname || "/";
+    // console.log('state in the loction login page ', location.state);
 
     const handleLogin = e => {
         e.preventDefault();
@@ -44,7 +47,8 @@ const Login = () => {
                     icon: "success",
                     button: "Aww yiss!",
                 }))
-                navigate(location?.state ? location.state :'/');
+                // navigate(location?.state ? location.state :'/');
+                navigate(from , {replace:true});
 
             })
             .catch(error => {
@@ -79,6 +83,9 @@ const Login = () => {
         
 
         <div className="hero min-h-screen mb-10" style={{ backgroundImage: `url(${loggedImage})` }}>
+            <Helmet>
+                <title>BUILDING | Login</title>
+            </Helmet>
             <div >
                 <h2 className="text-3xl text-center pt-5 font-bold text-yellow-800 ">Please Login</h2>
                 <form onSubmit={handleLogin} className="md:w-3/4 lg:w-1/2 mx-auto mb-3">
