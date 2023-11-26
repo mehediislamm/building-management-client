@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-vars */
 
 
 import { useContext, useState } from "react";
@@ -5,10 +6,12 @@ import { Link, useNavigate } from "react-router-dom";
 import { AuthContext } from "../../provider/AuthProvider";
 import { Helmet } from "react-helmet-async";
 import Swal from "sweetalert2";
+import useAxiosPublic from "../../hooks/useAxiosPublic";
 
 
 
 const SignUp = () => {
+    const axiosPublic = useAxiosPublic();
     const { createUser } = useContext(AuthContext)
     const [registerError, setRegisterError] = useState('');
     const [success, setSuccess] = useState('');
@@ -25,7 +28,7 @@ const SignUp = () => {
         const password = form.get('password')
 
 
-        console.log(name, photo, email, password);
+        // console.log(name, photo, email, password);
 
         setRegisterError('');
         setSuccess('');
@@ -47,13 +50,23 @@ const SignUp = () => {
             .then(result => {
                 console.log(result.user);
                 // setSuccess('Create Created Successfull')
-                Swal.fire({
-                    position: "top-end",
-                    icon: "success",
-                    title: "Your work has been saved",
-                    showConfirmButton: false,
-                    timer: 1500
-                });
+                const userInfo = {
+                    name,  email,
+                }
+                axiosPublic.post('/users', userInfo)
+                    .then(res => {
+                        if (res.data.insertedId) {
+                            console.log('user added to the data base ');
+                            Swal.fire({
+                                position: "top-end",
+                                icon: "success",
+                                title: "Your work has been saved",
+                                showConfirmButton: false,
+                                timer: 1500
+                            });
+                        }
+                    })
+
                 navigate(location?.state ? location.state : '/');
             })
 

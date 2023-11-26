@@ -71,7 +71,10 @@ const MenuDropdown = () => {
                             user ? <h1 className="font-bold text-red-500 text-center mb-2">{user.displayName}</h1> : null
                         }
                         {
-                            user ? <h1 className="font-bold text-center mb-2">Dashboard</h1> : null
+                            user ?  <Link to="/dashboard/myProfile"><button className="btn btn-xs ml-4 md:ml-10 lg:ml-5 mb-2">Dashboard</button></Link>:null
+                           
+                                    
+                                
                         }
 
                         {

@@ -25,7 +25,7 @@ const Apartment = () => {
             })
 
     }, [currentPage, dataPerPage])
-    console.log(currentPage);
+    // console.log(currentPage);
 
 
     // paginition handler 

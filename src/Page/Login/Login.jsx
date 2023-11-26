@@ -2,8 +2,9 @@
 
 
 import { Link, useLocation, useNavigate } from "react-router-dom";
-import { FaGithub, FaGoogle } from 'react-icons/fa';
+import { FaGithub, } from 'react-icons/fa';
 import { useContext, useState } from "react";
+import { FcGoogle } from 'react-icons/fc'
 
 import { GoogleAuthProvider, getAuth, signInWithPopup } from "firebase/auth";
 
@@ -12,6 +13,7 @@ import loggedImage from '../../assets/login.jpg'
 import { AuthContext } from "../../provider/AuthProvider";
 import app from "../../config/firebase.config";
 import { Helmet } from "react-helmet-async";
+import useAxiosPublic from "../../hooks/useAxiosPublic";
 
 
 
@@ -24,6 +26,8 @@ const Login = () => {
     const location = useLocation();
     const navigate = useNavigate();
     const from =  location.state?.from?.pathname || "/";
+    const axiosPublic = useAxiosPublic();
+    
     // console.log('state in the loction login page ', location.state);
 
     const handleLogin = e => {
@@ -61,18 +65,25 @@ const Login = () => {
     const handleGoogleSignIn = () => {
         signInWithPopup(auth, provider)
             .then(result => { console.log(result.user) 
-                setSuccess(swal({
+                const userInfo = {
+                    email: result.user?.email,
+                    name: result.user?.displayName
+
+                }
+                axiosPublic.post('/users', userInfo)
+                .then(res => {
+                    console.log(res.data);
+                    setSuccess(swal({
                     title: "Good job!",
                     text: "login success!",
                     icon: "success",
                     button: "Aww yiss!",
                 }))
+                })
+                
 
                 navigate(location?.state ? location.state : '/');
                 // access token
-                
-                
-            
             })
             
             .catch(error => { console.error(error) })
@@ -123,7 +134,8 @@ const Login = () => {
                         <FaGithub></FaGithub>
                         GITHUB</button>
                     <button onClick={handleGoogleSignIn} className="btn w-32 font-serif ">
-                        <FaGoogle className=" text-[#4285F4]  text-xl"></FaGoogle>
+                        {/* <FaGoogle className=" text-[#4285F4]  text-xl"></FaGoogle> */}
+                        <FcGoogle size={20}></FcGoogle>
                         GOOGLE</button>
                 </div>
 

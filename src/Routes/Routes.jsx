@@ -5,6 +5,11 @@ import Home from "../Page/Home/Home/Home";
 import Login from "../Page/Login/Login";
 import Apartment from "../Page/Apartment/Apartment";
 import SignUp from "../Page/SignUp/SignUp";
+import Dashboard from "../LayOut/Dashboard";
+import MyProfile from "../Page/Dashboard/MyProfile/MyProfile";
+import Announcements from "../Page/Dashboard/Announcements/Announcements";
+import AdminProfile from "../Page/Dashboard/AdminProfile/AdminProfile";
+import AgreementRequest from "../Page/Dashboard/AgreementRequest/AgreementRequest";
 
 
 
@@ -35,4 +40,26 @@ export const router = createBrowserRouter([
         
       ]
     },
+    {
+      path:'dashboard',
+      element:<Dashboard></Dashboard>,
+      children:[
+        {
+          path:'myProfile',
+          element:<MyProfile></MyProfile>
+        },
+        {
+          path:'announcements',
+          element:<Announcements></Announcements>
+        },
+        {
+          path:'adminProfile',
+          element:<AdminProfile></AdminProfile>
+        },
+        {
+          path:'agreementRequest',
+          element:<AgreementRequest></AgreementRequest>
+        },
+      ]
+    }
   ]);

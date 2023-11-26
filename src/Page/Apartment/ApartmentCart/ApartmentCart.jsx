@@ -23,6 +23,7 @@ const ApartmentCart = ({ datas }) => {
                 dataId: _id,
                 email: user.email,
                 name: user?.displayName,
+                userImg: user?.photoURL,
                 image,
                 floor_no,
                 block_name,
