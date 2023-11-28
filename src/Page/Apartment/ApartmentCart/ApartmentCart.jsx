@@ -67,7 +67,11 @@ const ApartmentCart = ({ datas }) => {
     }
     return (
         <div className="">
-            <div className="card card-compact w-96 bg-base-100 shadow-xl  ">
+            <div className="card card-compact w-96 bg-base-100 shadow-xl"
+            data-aos="fade-up"
+            data-aos-anchor-placement="top-bottom"
+            
+            >
                 <figure><img src={image} alt="Shoes" /></figure>
                 <div className="card-body ">
                     <div>
