@@ -32,7 +32,7 @@ const MenuDropdown = () => {
                     {
                         user ? null :
                             <Link to="/login">
-                                <button className="btn btn-xs">Login</button>
+                                <button className="btn btn-xs ">Login</button>
                             </Link>
                     }
                     <div className='hidden'>
@@ -70,17 +70,25 @@ const MenuDropdown = () => {
                         {
                             user ? <h1 className="font-bold text-red-500 text-center mb-2">{user.displayName}</h1> : null
                         }
+                        <button className='md:hidden disabled:cursor-not-allowed cursor-pointer hover:bg-neutral-100  font-semibold rounded-full btn-xs transition'>
+                            <NavLink to={'/'}>Home</NavLink>
+                        </button>
+
+                        <button className='md:hidden disabled:cursor-not-allowed cursor-pointer hover:bg-neutral-100 mb-2 font-semibold rounded-full btn-xs transition'>
+                            <NavLink to={'/apartment'}> Apartment</NavLink>
+                        </button>
+
                         {
-                            user ?  <Link to="/dashboard/myProfile"><button className="btn btn-xs ml-4 md:ml-10 lg:ml-5 mb-2">Dashboard</button></Link>:null
-                           
-                                    
-                                
+                            user ? <Link to="/dashboard/myProfile"><button className="disabled:cursor-not-allowed cursor-pointer hover:bg-neutral-100 font-semibold rounded-full btn-xs transitionml-4 ml-4 md:ml-14 lg:ml-7 mb-2">Dashboard</button></Link> : null
+
+
+
                         }
 
                         {
                             user ? <button onClick={handleSignOut} className="btn btn-primary btn-xs text-white"> Sign Out </button> :
                                 <Link to="/login">
-                                    <button className="btn btn-xs">Login</button>
+                                    <button className="disabled:cursor-not-allowed cursor-pointer hover:bg-neutral-100 mb-2 font-semibold rounded-full btn-xs transition ml-8">Login</button>
                                 </Link>
                         }
                     </div>

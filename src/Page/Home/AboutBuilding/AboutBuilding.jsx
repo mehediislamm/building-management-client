@@ -13,9 +13,9 @@ const AboutBuilding = () => {
                 About the building
             </h1>
             <h1 className="text-2xl  font-serif text-center mb-4 text-black"
-            data-aos="flip-left"
-            data-aos-easing="ease-out-cubic"
-            data-aos-duration="2000"
+            data-aos="fade-right"
+            data-aos-offset="300"
+            data-aos-easing="ease-in-sine"
             >NATIONAL AND INTERNATIONAL RESIDENTIAL REAL ESTATE - PERFECT CARE OF ARCHITECTURE
                 & RESIDENTIAL CULTUR</h1>
 

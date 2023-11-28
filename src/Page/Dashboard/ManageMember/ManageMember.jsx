@@ -91,7 +91,7 @@ const ManageMember = () => {
                                 <td>{user?.name}</td>
                                 <td>{user?.email}</td>
                                 <td>
-                                { user.role === 'admin' ? 'Member' : <button
+                                { user.role === 'member' ? 'member' : <button
                                         onClick={() =>handleMakeUser(user)}
                                         className="btn btn-accent btn-xs">
                                         Accept
