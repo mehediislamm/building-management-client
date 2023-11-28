@@ -10,6 +10,8 @@ import MyProfile from "../Page/Dashboard/MyProfile/MyProfile";
 import Announcements from "../Page/Dashboard/Announcements/Announcements";
 import AdminProfile from "../Page/Dashboard/AdminProfile/AdminProfile";
 import AgreementRequest from "../Page/Dashboard/AgreementRequest/AgreementRequest";
+import ManageMember from "../Page/Dashboard/ManageMember/ManageMember";
+import AdminAnnouncement from "../Page/Dashboard/AdminProfile/AdminAnnouncement/AdminAnnouncement";
 
 
 
@@ -49,12 +51,20 @@ export const router = createBrowserRouter([
           element:<MyProfile></MyProfile>
         },
         {
+          path:'manageMember',
+          element:<ManageMember></ManageMember>
+        },
+        {
           path:'announcements',
           element:<Announcements></Announcements>
         },
         {
           path:'adminProfile',
           element:<AdminProfile></AdminProfile>
+        },
+        {
+          path:'adminAnnouncement',
+          element:<AdminAnnouncement></AdminAnnouncement>
         },
         {
           path:'agreementRequest',

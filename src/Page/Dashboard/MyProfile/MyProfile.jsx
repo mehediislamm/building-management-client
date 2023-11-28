@@ -3,7 +3,7 @@ import useDataCart from "../../../hooks/useDataCart";
 
 const MyProfile = () => {
 
-    const [cart, ] = useDataCart();
+    const [cart] = useDataCart();
     console.log(cart);
 
     return (
