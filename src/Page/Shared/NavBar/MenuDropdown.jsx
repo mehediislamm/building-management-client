@@ -79,7 +79,7 @@ const MenuDropdown = () => {
                         </button>
 
                         {
-                            user ? <Link to="/dashboard/myProfile"><button className="disabled:cursor-not-allowed cursor-pointer hover:bg-neutral-100 font-semibold rounded-full btn-xs transitionml-4 ml-4 md:ml-14 lg:ml-7 mb-2">Dashboard</button></Link> : null
+                            user ? <Link to="/dashboard/myProfile"><button className="disabled:cursor-not-allowed cursor-pointer hover:bg-neutral-100 font-semibold rounded-full btn-xs transitionml-4 ml-2 md:ml-14 lg:ml-7 mb-2">Dashboard</button></Link> : null
 
 
 
@@ -88,7 +88,7 @@ const MenuDropdown = () => {
                         {
                             user ? <button onClick={handleSignOut} className="btn btn-primary btn-xs text-white"> Sign Out </button> :
                                 <Link to="/login">
-                                    <button className="disabled:cursor-not-allowed cursor-pointer hover:bg-neutral-100 mb-2 font-semibold rounded-full btn-xs transition ml-8">Login</button>
+                                    <button className="disabled:cursor-not-allowed cursor-pointer hover:bg-neutral-100 mb-2 font-semibold rounded-full btn-xs transition ml-5">Login</button>
                                 </Link>
                         }
                     </div>

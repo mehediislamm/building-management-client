@@ -56,7 +56,7 @@ const Apartment = () => {
             <Helmet>
                 <title>BUILDING | Apartment</title>
             </Helmet>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-10 pt-20 ml-14">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-10 justify-center">
                 {
                     data?.map(datas => <ApartmentCart key={datas._id} datas={datas}></ApartmentCart>)
 

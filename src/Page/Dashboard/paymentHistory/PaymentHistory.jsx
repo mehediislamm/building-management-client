@@ -18,7 +18,7 @@ const PaymentHistory = () => {
     return (
         <div>
             <h2 className="text-2xl font-bold text-center">Total Payments: {payments.length}</h2>
-            <div className="overflow-x-auto">
+            <div className="overflow-x-auto w-52 md:w-[500px] lg:w-[900px]">
                 <table className="table table-zebra">
                     {/* head */}
                     <thead>

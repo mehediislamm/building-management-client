@@ -63,7 +63,7 @@ const AgreementRequest = () => {
         <div>
             <div>
                 {
-                    cart.map(carts => <div  key={carts._id} className="overflow-x-auto">
+                    cart.map(carts => <div  key={carts._id} className="overflow-x-auto w-52 md:w-[500px] lg:w-[900px]">
                         <table className="table ">
                             {/* head */}
                             <thead>

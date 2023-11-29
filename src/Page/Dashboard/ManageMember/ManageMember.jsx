@@ -67,12 +67,12 @@ const ManageMember = () => {
 
     return (
         <div>
-            <div className="flex justify-evenly my-4">
-                <h2 className="text-3xl">All Users</h2>
-                <h2 className="text-3xl">Total Users: {users.length}</h2>
+            <div className="flex gap-10 md:justify-evenly my-4 ">
+                <h2 className="md:text-3xl">All Users</h2>
+                <h2 className="md:text-3xl">Total Users: {users.length}</h2>
             </div>
 
-            <div className="overflow-x-auto">
+            <div className="overflow-x-auto w-52 md:w-[500px] lg:w-[900px]">
                 <table className="table table-zebra w-full">
                     {/* head */}
                     <thead>

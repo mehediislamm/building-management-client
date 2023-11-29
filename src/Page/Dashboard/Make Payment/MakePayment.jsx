@@ -15,7 +15,7 @@ const MakePayment = () => {
             </div>
 
             {
-                carts.map(cartData => <div key={cartData._id} className="overflow-x-auto">
+                carts.map(cartData => <div key={cartData._id} className="overflow-x-auto w-52 md:w-[500px] lg:w-[900px]">
                     <table className="table">
                         {/* head */}
                         <thead>

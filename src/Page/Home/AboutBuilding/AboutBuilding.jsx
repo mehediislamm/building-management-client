@@ -5,10 +5,7 @@ const AboutBuilding = () => {
     return (
         <div className="mb-10">
             <h1 className="text-3xl font-bold font-mono text-center mb-8"
-            data-aos="fade-left"
-            data-aos-anchor="#example-anchor"
-            data-aos-offset="500"
-            data-aos-duration="500"
+            
             >
                 About the building
             </h1>

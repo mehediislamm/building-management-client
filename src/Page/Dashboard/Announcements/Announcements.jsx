@@ -24,10 +24,7 @@ const Announcements = () => {
                 {
                     announcement.map(announcements => <div key={announcements._id}>
                         <h1 className='text-3xl font-bold text-center  font-mono'
-                        data-aos="fade-left"
-                        data-aos-anchor="#example-anchor"
-                        data-aos-offset="500"
-                        data-aos-duration="500"
+                        
                         > Admin Announcement</h1>
                         <img className='mx-auto h-72' src={discount} alt="" 
                         data-aos="fade-right"

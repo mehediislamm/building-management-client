@@ -16,7 +16,7 @@ const Dashboard = () => {
     const [isMember] = useMember();
 
     return (
-        <div className="flex">
+        <div className="flex min-h-screen mx-auto ">
             {/* dashboard side bar  */}
             <div className="w-64 min-h-screen bg-orange-400">
                 <div className="p-3">
@@ -107,8 +107,10 @@ const Dashboard = () => {
 
 
             {/* dashboard content  */}
-            <div className="flex-1 p-8">
-                <Outlet></Outlet>
+            <div className="grid p-8 ">
+                
+                    <Outlet></Outlet>
+               
             </div>
         </div>
     );

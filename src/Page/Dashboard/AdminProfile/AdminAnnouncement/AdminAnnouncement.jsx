@@ -31,7 +31,7 @@ const AdminAnnouncement = () => {
                     })
                 }
 return (
-    <div>
+    <div className="w-52 md:w-[500px] lg:w-[900px]">
         <form onSubmit={MakeAnnouncement} className="card-body">
             <div className="form-control">
                 <label className="label">
