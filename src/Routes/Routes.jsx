@@ -12,6 +12,9 @@ import AdminProfile from "../Page/Dashboard/AdminProfile/AdminProfile";
 import AgreementRequest from "../Page/Dashboard/AgreementRequest/AgreementRequest";
 import ManageMember from "../Page/Dashboard/ManageMember/ManageMember";
 import AdminAnnouncement from "../Page/Dashboard/AdminProfile/AdminAnnouncement/AdminAnnouncement";
+import MakePayment from "../Page/Dashboard/Make Payment/MakePayment";
+import Payment from "../Page/Dashboard/Payment/Payment";
+import PaymentHistory from "../Page/Dashboard/paymentHistory/PaymentHistory";
 
 
 
@@ -53,6 +56,18 @@ export const router = createBrowserRouter([
         {
           path:'manageMember',
           element:<ManageMember></ManageMember>
+        },
+        {
+          path:'makePayment',
+          element:<MakePayment></MakePayment>
+        },
+        {
+          path:'payment',
+          element:<Payment></Payment>
+        },
+        {
+          path:'paymentHistory',
+          element:<PaymentHistory></PaymentHistory>
         },
         {
           path:'announcements',

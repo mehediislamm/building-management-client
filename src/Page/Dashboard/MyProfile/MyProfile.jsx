@@ -7,110 +7,57 @@ const MyProfile = () => {
     console.log(cart);
 
     return (
-        <div>
-
-            <div>
-                {
-                    cart.map(carts => <div key={carts._id} className="overflow-x-auto">
-                        <table className="table ">
-                            {/* head */}
-                            <thead >
-                                <tr>
-                                    <div  className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-8" >
-                                        <div>
-                                            <th className="text-xl font-mono">Name</th>
-                                            <tr>
-                                                <th>
-                                                   
-                                                    {carts.name}
-                                                </th>
-                                            </tr>
+        <div className="overflow-x-scroll">
+            {
+                cart.map(carts => <div key={carts._id} className="overflow-x-auto">
+                    <table className="table">
+                        {/* head */}
+                        <thead >
+                            <tr>
+                                
+                                <th>image</th>
+                                <th>Name</th>
+                                <th>email</th>
+                                <th>flor</th>
+                                <th>block</th>
+                                <th>room</th>
+                                <th>rent</th>
+                               <th>date</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            {/* row 1 */}
+                            <tr>
+                               
+                                <td>
+                                    <div className="flex items-center gap-3">
+                                        <div className="avatar">
+                                            <div className="mask mask-squircle w-12 h-12">
+                                                <img src={carts?.userImg} alt="Avatar Tailwind CSS Component" />
+                                            </div>
                                         </div>
-
-                                        <div>
-                                            <th className="text-xl font-mono">image</th>
-                                            <tr>
-                                                <th>
-                                                    <img className="h-12 rounded-full" src={carts?.userImg} alt=" " />
-                                                </th>
-                                            </tr>
-                                        </div>
-
-                                        <div >
-                                            <th className="text-xl font-mono">email</th>
-                                            <tr>
-                                                <td className="pt-5">
-                                                    {carts?.email}
-
-                                                </td>
-                                            </tr>
-                                        </div>
-
-                                        <div>
-                                            <th className=" md:pl-12 text-xl font-mono">Accept date</th>
-                                            <tr>
-                                                <td>{carts?.data}</td>
-                                            </tr>
-                                        </div>
-
-                                        <div>
-                                            <th className="md:pl-20 text-xl font-mono"> Rent</th>
-                                            <tr>
-                                                <th className="md:pl-20">
-                                                    {carts?.rent}
-                                                </th>
-                                            </tr>
-                                        </div>
-
-                                        <div>
-                                            <th className="text-xl font-mono"> Floor_no</th>
-                                            <tr>
-                                                <th>
-                                                    {carts?.floor_no}
-                                                </th>
-                                            </tr>
-                                        </div>
-
-                                        <div>
-                                            <th className="text-xl font-mono">Block</th>
-                                            <tr>
-                                                <th>
-                                                    {carts?.block_name}
-                                                </th>
-                                            </tr>
-                                        </div>
-
-                                        <div>
-                                            <th className="text-xl font-mono">Room no</th>
-                                            <tr>
-                                                <th>
-                                                    {carts?.apartment_no}
-                                                </th>
-                                            </tr>
-                                        </div>
+                                        
                                     </div>
-
-
-
-
-
-
-
-
-
-                                </tr>
-                            </thead>
+                                </td>
+                                <td>
+                                <td>{carts?.name}</td>
+                                </td>
+                                <td>
+                                    {carts?.email}
+                                </td>
+                                <td>{carts?.floor_no}</td>
+                                <td>{carts?.block_name}</td>
+                                <td>{carts?.apprtment_no}</td>
+                                <td>{carts?.rent}</td>
+                                <td>{carts?.data}</td>
+                            </tr>
                            
+                        </tbody>
+                     
 
-
-                        </table>
-                    </div>)
-                }
-            </div>
-
-
-
-
+                    </table>
+                </div>)
+            }
         </div>
     );
 };
