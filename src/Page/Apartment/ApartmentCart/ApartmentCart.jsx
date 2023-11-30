@@ -88,7 +88,7 @@ const ApartmentCart = ({ datas }) => {
                     <div className="card-actions justify-center">
                         <button 
                         onClick={()=> handleAddToCartData(datas) }
-                        className="btn btn-primary"> Agreement</button>
+                        className="btn btn-primary "> Agreement</button>
                     </div>
                 </div>
             </div>

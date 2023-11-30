@@ -18,7 +18,7 @@ const Apartment = () => {
 
 
     useEffect(() => {
-        fetch(`http://localhost:5000/data?page=${currentPage}&size=${dataPerPage}`)
+        fetch(`https://building-management-server-six.vercel.app/data?page=${currentPage}&size=${dataPerPage}`)
             .then(res => res.json())
             .then(data => {
                 setData(data)
@@ -67,13 +67,13 @@ const Apartment = () => {
             </div>
             <div className="flex justify-center mb-5">
                
-                <button onClick={handlePrevPage} className="btn">prev</button>
+                <button onClick={handlePrevPage} className="btn btn-sm">prev</button>
                 {
                     pages?.map(page => <button
                         onClick={() => setCurrentPage(page)}
-                        className="btn active:bg-orange-400" key={page}>{page}</button>)
+                        className="btn active:bg-orange-400 btn-sm" key={page}>{page}</button>)
                 }
-                <button onClick={handleNextPage} className="btn">Next</button>
+                <button onClick={handleNextPage} className="btn btn-sm">Next</button>
                 <select onChange={handleDataPerPage} className="bg-primary rounded-xl text-white" value={dataPerPage} >
                     <option value="6">6</option>
                     <option value="10">10</option>

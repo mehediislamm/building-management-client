@@ -9,7 +9,7 @@ const Payment = () => {
     return (
         <div>
             <h1 className="text-2xl text-center">PAYMENT</h1>
-            <div>
+            <div className="w-52 md:w-[700px]">
                 <Elements stripe={stripePromise}>
                         <CheckoutForm></CheckoutForm>
                 </Elements>

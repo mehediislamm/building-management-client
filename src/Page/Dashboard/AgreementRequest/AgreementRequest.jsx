@@ -8,21 +8,17 @@ const AgreementRequest = () => {
     const axiosSecure = useAxiosSecure();
 
 
-    const handleMakeUser = user =>{
-        axiosSecure.patch(`/carts/admin/${user._id}`)
-        .then(res =>{
-            console.log(res.data);
-            if(res.data.modifiedCount > 0){
-                refetch();
+    const handleMakeUser = () =>{
+        
                 Swal.fire({
                     position: "top-end",
                     icon: "success",
-                    title: `${cart?.name} is an admin now`,
+                    title: `accecpt member`,
                     showConfirmButton: false,
                     timer: 1500
                   });
-            }
-        })
+            
+        
     }
 
 
@@ -105,11 +101,11 @@ const AgreementRequest = () => {
                                     <td>{carts?.rent}</td>
                                     <td>{carts?.data}</td>
                                     <th>
-                                   { carts.role === 'admin' ? 'Admin' : <button
-                                        onClick={() =>handleMakeUser(carts)}
+                                   <button
+                                        onClick={() =>handleMakeUser()}
                                         className="btn btn-accent btn-xs">
                                         Accept
-                                    </button>}
+                                    </button>
                                     </th>
                                     <th>
                                     <button

@@ -4,7 +4,7 @@ import useDataCart from "../../../hooks/useDataCart";
 const MyProfile = () => {
 
     const [cart] = useDataCart();
-    console.log(cart);
+    // console.log(cart);
 
     return (
         <div className="overflow-x-scroll">

@@ -15,6 +15,8 @@ import AdminAnnouncement from "../Page/Dashboard/AdminProfile/AdminAnnouncement/
 import MakePayment from "../Page/Dashboard/Make Payment/MakePayment";
 import Payment from "../Page/Dashboard/Payment/Payment";
 import PaymentHistory from "../Page/Dashboard/paymentHistory/PaymentHistory";
+import PrivateRoute from "./PrivateRoute";
+import AdminRoute from "./AdminRoute";
 
 
 
@@ -31,8 +33,8 @@ export const router = createBrowserRouter([
         },
         {
             path:'apartment',
-            element:<Apartment></Apartment>,
-            loader: () => fetch('http://localhost:5000/DataCount')
+            element:<PrivateRoute><Apartment></Apartment></PrivateRoute>,
+            loader: () => fetch('https://building-management-server-six.vercel.app/DataCount')
         },
         {
             path:'login',
@@ -55,7 +57,7 @@ export const router = createBrowserRouter([
         },
         {
           path:'manageMember',
-          element:<ManageMember></ManageMember>
+          element:<AdminRoute><ManageMember></ManageMember></AdminRoute>
         },
         {
           path:'makePayment',
@@ -75,15 +77,15 @@ export const router = createBrowserRouter([
         },
         {
           path:'adminProfile',
-          element:<AdminProfile></AdminProfile>
+          element:<AdminRoute><AdminProfile></AdminProfile></AdminRoute>
         },
         {
           path:'adminAnnouncement',
-          element:<AdminAnnouncement></AdminAnnouncement>
+          element:<AdminRoute><AdminAnnouncement></AdminAnnouncement></AdminRoute>
         },
         {
           path:'agreementRequest',
-          element:<AgreementRequest></AgreementRequest>
+          element:<AdminRoute><AgreementRequest></AgreementRequest></AdminRoute>
         },
       ]
     }

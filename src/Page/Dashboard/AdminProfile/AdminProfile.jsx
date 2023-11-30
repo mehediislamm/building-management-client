@@ -4,6 +4,8 @@ import useAuth from "../../../hooks/useAuth";
 import useAxiosSecure from "../../../hooks/useAxiosSecure";
 import { FaUsers } from "react-icons/fa";
 import { PieChart, Pie, Legend, Cell } from 'recharts';
+import useDataCart from "../../../hooks/useDataCart";
+import { useEffect, useState } from "react";
 const COLORS = ['#0088FE', '#00C49F', '#FFBB28', '#FF8042'];
 
 
@@ -11,6 +13,7 @@ const COLORS = ['#0088FE', '#00C49F', '#FFBB28', '#FF8042'];
 const AdminProfile = () => {
     const { user } = useAuth();
     const axiosSecure = useAxiosSecure();
+    
 
     const { data: stats = [] } = useQuery({
         queryKey: ['admin-stats'],
@@ -20,13 +23,15 @@ const AdminProfile = () => {
         }
     });
 
-    const { data: chartData = [] } = useQuery({
-        queryKey: ['order-stats'],
-        queryFn: async () => {
-            const res = await axiosSecure.get('/order-stats');
-            return res.data;
-        }
-    })
+    
+
+    // const { data: chartData = [] } = useQuery({
+    //     queryKey: ['order-stats'],
+    //     queryFn: async () => {
+    //         const res = await axiosSecure.get('/order-stats');
+    //         return res.data;
+    //     }
+    // })
 
 
     // const RADIAN = Math.PI / 180;
@@ -42,11 +47,16 @@ const AdminProfile = () => {
     //     );
     // };
 
-   
+
 
     // const pieChartData = chartData.map(data =>{
     //     return {name:data.rent, value:data.apartment_no}
     // })
+
+   
+
+
+
 
     return (
         <div className="">
@@ -86,6 +96,11 @@ const AdminProfile = () => {
                     <Legend></Legend>
                 </PieChart>
             </div> */}
+
+             
+
+
+
         </div>
     );
 };

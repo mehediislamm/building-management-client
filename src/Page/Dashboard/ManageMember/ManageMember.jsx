@@ -3,7 +3,7 @@ import useAxiosSecure from "../../../hooks/useAxiosSecure";
 import Swal from "sweetalert2";
 import useUserDataCart from "../../../hooks/useUserDataCart";
 
- 
+
 
 const ManageMember = () => {
     const axiosSecure = useAxiosSecure();
@@ -16,22 +16,23 @@ const ManageMember = () => {
     // })
     const [users, refetch] = useUserDataCart();
 
+    // console.log(users);
 
-    const handleMakeUser = user =>{
-        axiosSecure.patch(`/users/admin/${user._id}`)
-        .then(res =>{
-            console.log(res.data);
-            if(res.data.modifiedCount > 0){
-                refetch();
-                Swal.fire({
-                    position: "top-end",
-                    icon: "success",
-                    title: `member added`,
-                    showConfirmButton: false,
-                    timer: 1500
-                  });
-            }
-        })
+    const handleMakeUser = user => {
+        axiosSecure.patch(`/users/member/${user._id}`)
+            .then(res => {
+                console.log(res.data);
+                if (res.data.modifiedCount > 0) {
+                    refetch();
+                    Swal.fire({
+                        position: "top-end",
+                        icon: "success",
+                        title: `${user.name} member added`,
+                        showConfirmButton: false,
+                        timer: 1500
+                    });
+                }
+            })
     }
 
 
@@ -91,9 +92,10 @@ const ManageMember = () => {
                                 <td>{user?.name}</td>
                                 <td>{user?.email}</td>
                                 <td>
-                                { user.role === 'member' ? 'member' : <button
-                                        onClick={() =>handleMakeUser(user)}
+                                   { user.role === 'member' ? 'member': <button
+                                        onClick={() => handleMakeUser(user)}
                                         className="btn btn-accent btn-xs">
+                                        {user?.role}
                                         Accept
                                     </button>}
 

@@ -1,16 +1,18 @@
 import { Link } from "react-router-dom";
 import useDataCart from "../../../hooks/useDataCart";
-
+ 
 
 const MakePayment = () => {
     const [carts] = useDataCart();
     const TotalRent = carts.reduce((total, item) => total + item.rent, 0)
+   
+ 
     return (
         <div>
             <div className="flex gap-20 justify-center mb-10">
                 <h1 className="text-xl font-bold text-center">Total_rent: {TotalRent}</h1>
                 <Link to="/dashboard/payment">
-                    <button className="btn btn-primary btn-xs">pay</button>
+                    <button   className="btn btn-primary btn-xs ">pay</button>
                 </Link>
             </div>
 
@@ -27,6 +29,7 @@ const MakePayment = () => {
                                 <th>block name</th>
                                 <th>apartment no</th>
                                 <th>rent</th>
+                                <th>coupon</th>
                                 <th>month</th>
 
                             </tr>
@@ -43,9 +46,18 @@ const MakePayment = () => {
                                 <td>{cartData?.floor_no}</td>
                                 <td>{cartData?.apartment_no}</td>
                                 <td>{cartData?.rent}</td>
+                                
                                 <td>
-                                    <input type="date" name="date" id="" />
+                                    <input   className="w-16 input input-bordered input-accent  h-6" type="text" name="text" id="" />
                                 </td>
+                                <td>
+                                     <input    type="date" name="date" id="" />
+                                </td>
+                                    
+                                 
+                                   
+                                 
+                               
 
                             </tr>
 
