@@ -13,4 +13,4 @@
 
 - It was a great journey with Programming Hero. I dedicated almost 8-10 hours a day to this course. It was challenging when I worked on assignments.Afterward, when I received the results, all the difficulties turned into joy. Sometimes, I felt demotivated, but listening to Jhankar Bhai's motivational words inspired me again, giving me the courage to believe that I could do it.Jhankar Bhai is an amazing person, and his deep thoughts have touched my heart. The use of the team members and their encouragement has fascinated me. They are all very good, and they can understand things very well. I pray for everyone. (Endless love)
 
-[Live link ]([https://github.com/mir-hussain/retro-tech-talks-client](https://building-management-42ca6.web.app/)https://building-management-42ca6.web.app/)
+[Live link ]([https://building-management-42ca6.web.app/])
